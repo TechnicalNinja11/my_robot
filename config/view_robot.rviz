@@ -1,0 +1,41 @@
+Visualization Manager:
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: base_link
+    Frame Rate: 30
+    
+  Displays:
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Topic: /robot_description
+      
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: true
+      Marker Scale: 0.5
+      
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Plane: XY
+      Plane Cell Count: 10
+      Cell Size: 0.1
+      
+  Perspectives:
+    Current:
+      Name: Current View
+      Class: rviz_common/Config
+      Displays:
+        Expanded:
+          - /RobotModel1
+          - /TF1
+          - /Grid1
+        Tree:
+          - name: RobotModel
+            type: rviz_default_plugins/RobotModel
+          - name: TF
+            type: rviz_default_plugins/TF
+          - name: Grid
+            type: rviz_default_plugins/Grid
+      Value: true
