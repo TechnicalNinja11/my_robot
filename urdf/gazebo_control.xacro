@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="robot">
+
+    <!-- ========== GAZEBO HARMONIC PLUGINS ========== -->
+    <gazebo>
+        <plugin filename="libignition-gazebo-diff-drive-system.so" name="ignition::gazebo::systems::DiffDrive">
+            <left_joint>left_wheel_joint</left_joint>
+            <right_joint>right_wheel_joint</right_joint>
+            <wheel_separation>0.136</wheel_separation>
+            <wheel_radius>0.0345</wheel_radius>
+            <min_velocity>-1.0</min_velocity>
+            <max_velocity>1.0</max_velocity>
+            <min_acceleration>-1.0</min_acceleration>
+            <max_acceleration>1.0</max_acceleration>
+            <topic>cmd_vel</topic>
+            <odom_topic>odom</odom_topic>
+            <odom_frame>odom</odom_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+        </plugin>
+    </gazebo>
+    
+
+</robot>
